@@ -16,3 +16,13 @@ shared_scripts {
 	'shared/init.lua',
 	'shared/config.lua',
 }
+
+ui_page 'html/index.html'
+
+files {
+    'html/*.html',
+    'html/*.css',
+    'html/*.js',
+}
+
+lua54 'yes'
