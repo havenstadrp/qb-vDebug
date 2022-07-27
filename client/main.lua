@@ -137,9 +137,9 @@ CreateThread( function()
 					topSpeed = 0.0
 					accelTime = 0.0
 					brakeTime = 0.0
+					speedStep1 = 0.0
 					speedStep2 = 0.0
 					speedStep3 = 0.0
-					speedStep1 = 0.0
 					speedStep4 = 0.0
 					startAccelTime = 0.0
 					startBrakeTime = 0.0
@@ -148,11 +148,11 @@ CreateThread( function()
 				end
 
 				if (IsControlJustPressed(0, 32) and not IsControlPressed(0, 18)) or IsControlJustReleased(0, 18) then
+					accelTime = 0.0
 					speedStep1 = 0.0
 					speedStep2 = 0.0
 					speedStep3 = 0.0
 					speedStep4 = 0.0
-					accelTime = 0.0
 					startAccelTime = GetGameTimer()
 				end
 
