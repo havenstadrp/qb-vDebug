@@ -79,10 +79,6 @@ CreateThread(function()
 						value_x, value_y, value_z = v.value.x, v.value.y, v.value.z 
 						break
 					end
-					local vecfind = string.find("vecCentreOfMassOffset", "vec")
-					if vecfind ~= nil and vecfind == 1 and GetVehicleHandlingVector(veh, "CHandlingData", "vecCentreOfMassOffset" ) then
-						table.insert(VehData, { name = "vecCentreOfMassOffset", value = GetVehicleHandlingVector(veh, "CHandlingData", "vecCentreOfMassOffset" ), type = "vector3" } )
-					end
 				end
 			end
         end
@@ -114,12 +110,12 @@ CreateThread( function()
 				local speed = GetEntitySpeed(ped) * speedUnit
 
 				local carPos = GetEntityCoords(veh)
-				local forPos = GetOffsetFromEntityInWorldCoords(veh, value_x, value_y, value_z)
+				local forPos = GetOffsetFromEntityInWorldCoords(veh, value_x, 1.0, value_z)
 				local backPos = GetOffsetFromEntityInWorldCoords(veh, value_x, -1.0, value_z)
 				local LPos = GetOffsetFromEntityInWorldCoords(veh, 1.0, value_y, value_z)
 				local RPos = GetOffsetFromEntityInWorldCoords(veh, -1.0, value_y, value_z) 
 	
-				local forPos2 = GetOffsetFromEntityInWorldCoords(veh, value_x, value_y, value_z)
+				local forPos2 = GetOffsetFromEntityInWorldCoords(veh, value_x, 2.0, value_z)
 				local backPos2 = GetOffsetFromEntityInWorldCoords(veh, value_x, -2.0, value_z)
 				local LPos2 = GetOffsetFromEntityInWorldCoords(veh, 2.0, value_y, value_z)
 				local RPos2 = GetOffsetFromEntityInWorldCoords(veh, -2.0, value_y, value_z)    
