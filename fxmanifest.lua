@@ -6,9 +6,6 @@ version '1.0.0'
 
 client_scripts {
 	'client/main.lua',
-	'@PolyZone/client.lua',
-	'@PolyZone/BoxZone.lua',
-	'@PolyZone/ComboZone.lua'
 }
 
 server_scripts {
