@@ -1,5 +1,6 @@
 Config = {}
 Config.Permission = "god" --set "user" if you dont want perm restriction
+Config.Command = "vehdebug" -- in case you want to change name of command
 
 --Configure default speed units and steps for logic & UI
 Config.Speed = "MPH" --MPH or KMH
