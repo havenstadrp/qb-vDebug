@@ -38,7 +38,8 @@ const updateData = async (vehData) => {
 
     if (top > current) {
         topSpeed.style.color = 'rgba(245, 217, 39, 255)';
-    } else if (top < current) {
+    }; 
+    if (top < current) {
         topSpeed.style.color = 'rgba(0, 152, 255, 255)';
     };
 
