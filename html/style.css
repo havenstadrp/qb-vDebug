@@ -1,7 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 
 :root {
-    --main-font-size: 1.75vh;  
+    --main-font-size: 1.75vh;
+}
+
+span + span {
+    margin-left: 15px;
+}
+
+.label {
+    display: none;
+    position: fixed;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+
+    font-family: 'Kanit', monospace;
+    font-size: var(--main-font-size);
+    text-align: center;
+    font-weight: 900;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#label-reset {
+    color: rgba(255, 214, 129, 255);
+}
+
+#label-teleport {
+    color: rgba(255, 214, 129, 255);
 }
 
 .container {
@@ -26,7 +57,11 @@
     font-family: 'Kanit', monospace;
     font-size: var(--main-font-size);
     font-weight: 900;
-    text-shadow:0px 0px 10px rgba(0, 0, 0, 0);
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 #data-model {

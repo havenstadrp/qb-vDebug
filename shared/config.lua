@@ -17,11 +17,10 @@ Config.Flip = 172   -- "Up arrow" key
 
 --Reset the numbers
 Config.Reset = 61 --Currently "Left-Shift"
-Config.ResetLabel = "L-Shift" --Only for visuals. Replace with "nil" if you dont want it to show
+Config.ResetLabel = "L-Shift" --Only for visuals.
 
 --Configure teleport key.
-Config.UseTeleport = true --Or false to disable
 Config.TeleportToCoords = vector3(-1730.1, -2899.99, 13.67) --Teleport location
 Config.TeleportToCoordsHeading = 329.77 --Which way you are looking after being teleported
 Config.TeleportToCoordsKey = 306 --Currently "N"
-Config.TeleportToCoordsLabel = "N" -- Only for visuals. Replace with "nil" if you dont want it to show
+Config.TeleportToCoordsLabel = "N" -- Only for visuals.

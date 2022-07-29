@@ -32,7 +32,7 @@ const updateTime = async (vehData) => {
     $("#data-speed-4").html(vehData.step4 + vehData.units + ': ' + vehData.speed4);
 };
 
-const updateData = async (vehData) => {
+const updateVeh = async (vehData) => {
     let top = Number(vehData.topSpeed);
     let current = Number(vehData.mph);
 
@@ -61,11 +61,15 @@ const resetData = async () => {
     speed4.style.color = 'rgba(210, 210, 210, 240)';
 };
 
-const showUI = async () => {
+const showUI = async (vehData) => {
+    $("#label-reset").html('[' + vehData.reset + ']: Reset Data');
+    $("#label-teleport").html('[' + vehData.teleport + ']: Teleport');
+    $(".label").fadeIn(300);
     $(".container").fadeIn(300);
 };
 
 const hideUI = async () => {
+    $(".label").hide();
     $(".container").hide();
 };
 
@@ -76,12 +80,12 @@ window.addEventListener("message", (event) => {
     switch (action) {
         case "UPDATE_TIME":
             return updateTime(vehData);
-        case "UPDATE_DATA":
-            return updateData(vehData);
+        case "UPDATE_VEH":
+            return updateVeh(vehData);
         case "RESET_DATA":
             return resetData();
         case "SHOW_UI":
-            return showUI();
+            return showUI(vehData);
         case "HIDE_UI":
             return hideUI();
         default:
